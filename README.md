@@ -11,11 +11,4 @@ El diseño de la base de datos de la librería se basa en una relación de depen
 
 Esta estructura relacional permite una gestión eficaz y sistemática de la información bibliográfica, facilitando la consulta y recuperación de datos sobre los libros y sus autores. La relación 1-N asegura la integridad y consistencia de los datos, y permite una fácil identificación de los autores y sus respectivas obras.
 ### Diagrama entidad-relación
-![DER](./DER (Diagrama de Entidad de Relaciones).png)
-
-
-
-por el mobi
-[VER DIAGRAMA](https://github.com/devmobi1812/TPE-WEB2/blob/main/DER%20(Diagrama%20de%20Entidad%20de%20Relaciones).png)
-
 ![VER DIAGRAMA](./DER%20(Diagrama%20de%20Entidad%20de%20Relaciones).png)
