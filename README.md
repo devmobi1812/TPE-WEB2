@@ -5,7 +5,7 @@
 - Ayrton Lopez Mobilio
 
 ## Temática
-Diseño Relacional de una Base de Datos para Gestión Bibliográfica: Relación 1-N entre Libros y Autores
+Diseño Relacional de una Base de Datos para Gestionar una Libreria: Relación 1-N entre Libros y Autores
 ### Descripción
 El diseño de la base de datos de la librería se basa en una relación de dependencia entre los registros de libros y autores. Esta relación se define como 1-N, donde cada registro de libro está asociado a un único autor, mientras que un autor puede estar relacionado con múltiples registros de libros.
 
