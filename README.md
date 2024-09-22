@@ -15,4 +15,4 @@ Esta estructura relacional permite una gestión eficaz y sistemática de la info
 
 ## Archivo SQL (Base de Datos)
 
-[Ir a SQL](./BASE%DE%DATOS.sql)
+[Ir a SQL](./BASE%20DE%20DATOS.sql)
