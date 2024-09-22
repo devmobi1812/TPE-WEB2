@@ -18,4 +18,4 @@ Esta estructura relacional permite una gestión eficaz y sistemática de la info
 por el mobi
 [VER DIAGRAMA] (https://github.com/devmobi1812/TPE-WEB2/blob/main/DER%20(Diagrama%20de%20Entidad%20de%20Relaciones).png)
 
-![VER DIAGRAMA] (/DER (Diagrama de Entidad de Relaciones))
+![VER DIAGRAMA] (./DER (Diagrama de Entidad de Relaciones))
