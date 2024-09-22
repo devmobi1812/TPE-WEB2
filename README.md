@@ -1,7 +1,7 @@
 # TPE-WEB2
 
 ## Integrantes
-- Dario José Carsaniga ()
+- Dario José Carsaniga (piexa.vu4r7@aleeas.com)
 - Ayrton Lopez Mobilio (ayrtonmobilio2020@gmail.com)
 
 ## Temática
