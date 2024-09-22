@@ -1,8 +1,8 @@
 # TPE-WEB2
 
 ## Integrantes
-- Dario José Carsaniga
-- Ayrton Lopez Mobilio
+- Dario José Carsaniga ()
+- Ayrton Lopez Mobilio (ayrtonmobilio2020@gmail.com)
 
 ## Temática
 Diseño Relacional de una Base de Datos para Gestionar una Libreria: Relación 1-N entre Libros y Autores
