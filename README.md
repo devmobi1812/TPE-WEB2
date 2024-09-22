@@ -13,6 +13,6 @@ Esta estructura relacional permite una gestión eficaz y sistemática de la info
 ## Diagrama entidad-relación
 ![VER DIAGRAMA](./DER%20(Diagrama%20de%20Entidad%20de%20Relaciones).png)
 
-##Archivo SQL (Base de Datos)
+## Archivo SQL (Base de Datos)
 
 [Ir a SQL](./BASE%DE%DATOS.sql)
