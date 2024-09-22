@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 22, 2024 at 08:31 PM
+-- Generation Time: Sep 22, 2024 at 08:52 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,15 +33,6 @@ CREATE TABLE `autores` (
   `biografia` varchar(2000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `autores`
---
-
-INSERT INTO `autores` (`id`, `nombre`, `biografia`) VALUES
-(1, 'Gabriel García Márquez', 'Gabriel García Márquez fue un escritor colombiano, autor de Cien años de soledad. Ganó el Premio Nobel de Literatura en 1982.'),
-(2, 'Isabel Allende', 'Isabel Allende es una autora chilena, conocida por su obra La casa de los espíritus y sus historias que mezclan lo mágico con lo real.'),
-(3, 'J.K. Rowling', 'J.K. Rowling es la autora de la serie de libros Harry Potter, que ha sido adaptada al cine y ha vendido millones de copias en todo el mundo.');
-
 -- --------------------------------------------------------
 
 --
@@ -58,15 +49,6 @@ CREATE TABLE `libros` (
   `autor` int(11) NOT NULL,
   `nro_de_paginas` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `libros`
---
-
-INSERT INTO `libros` (`isbn`, `titulo`, `fecha_de_publicacion`, `editorial`, `encuadernado`, `sinopsis`, `autor`, `nro_de_paginas`) VALUES
-(9780747532743, 'Harry Potter and the Philosopher\'s Stone', '1997-06-26', 'Bloomsbury', 'Tapa dura', 'El primer libro de la famosa serie de Harry Potter, donde Harry descubre que es un mago y asiste a Hogwarts.', 3, 0),
-(9788437604947, 'Cien años de soledad', '1967-06-05', 'Sudamericana', 'Tapa dura', 'La obra maestra de García Márquez, que relata la historia de la familia Buendía a lo largo de siete generaciones.', 1, 0),
-(9789506441844, 'La casa de los espíritus', '1982-04-12', 'Sudamericana', 'Tapa blanda', 'Novela que narra la saga familiar de los Trueba y los poderes sobrenaturales de algunos de sus miembros.', 2, 0);
 
 --
 -- Indexes for dumped tables
@@ -93,7 +75,7 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT for table `autores`
 --
 ALTER TABLE `autores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
