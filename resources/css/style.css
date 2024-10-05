@@ -1,0 +1,13 @@
+.autores {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+}
+
+
+@media screen and (min-width: 660px) { 
+    .autores {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
