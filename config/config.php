@@ -2,9 +2,9 @@
 
     $configuracion = [];
 
-    $configuracion['host']       = 'mysqldb';
+    $configuracion['host']       = 'localhost';
     $configuracion['usuario']    = 'root';
-    $configuracion['password']   = 'tudai';
-    $configuracion['basenombre'] = 'tareas2024';
+    $configuracion['password']   = '';
+    $configuracion['database'] = 'libreria';
     
 ?>
