@@ -20,6 +20,20 @@ class LibrosView{
         $this->smarty->assign("isAdmin", $isAdmin);
         $this->smarty->display("templates/verLibro.tpl");
     }
+    public function create($autores, $isAdmin){
+        $this->smarty->assign('titulo', "Nuevo libro");
+        $this->smarty->assign("autores", $autores);
+        $this->smarty->assign("isAdmin", $isAdmin);
+        $this->smarty->display("templates/crearLibro.tpl");
+    }
+
+    public function edit($libro, $autores, $isAdmin){
+        $this->smarty->assign('titulo', "Editar ".$libro->titulo);
+        $this->smarty->assign("libro", $libro);
+        $this->smarty->assign("autores", $autores);
+        $this->smarty->assign("isAdmin", $isAdmin);
+        $this->smarty->display("templates/editarLibro.tpl");
+    }
 
 }
 ?>
