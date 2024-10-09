@@ -1,3 +1,4 @@
 Dockerfile
 docker-compose.yml
 000-default.conf
+/templates_c/*
