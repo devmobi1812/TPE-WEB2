@@ -5,6 +5,8 @@ class LibrosView{
     function __construct(){
         $this->smarty = new Smarty();
         $this->smarty->assign('base', BASE_URL);
+        //TODO:temporal, preguntar si es buena práctica
+        $this->smarty->assign("user", AuthHelper::loggedUser());
     }
 
     public function index($libros, $isAdmin){

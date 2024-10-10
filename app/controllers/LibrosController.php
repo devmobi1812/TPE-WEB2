@@ -29,10 +29,12 @@ class LibrosController {
     }
 
     public function create(){
-        if(AuthHelper::isAdmin()){
-            $this->view->create($this->autoresModel->getAutores(), AuthHelper::isAdmin());
+        $isAdmin = AuthHelper::isAdmin();
+        if($isAdmin){
+            $this->view->create($this->autoresModel->getAutores(), $isAdmin);
         }else{
             header("Location: /login");
+            die();
         }
     }
 
@@ -40,16 +42,17 @@ class LibrosController {
     }
 
     public function edit($id){
-        $user = AuthHelper::loggedUser();
+        $isAdmin = AuthHelper::isAdmin();
         $libro = $this->model->find($id);
-        if($user){
+        if($isAdmin){
             if($libro){
-                $this->view->edit($libro, $this->autoresModel->getAutores(), AuthHelper::isAdmin());
+                $this->view->edit($libro, $this->autoresModel->getAutores(), $isAdmin);
             }else{
                 echo "libro con isbn ".$id." no encontrado";
             }
         }else{
             header("Location: /login");
+            die();
         }
     }
     public function update(){
@@ -60,8 +63,10 @@ class LibrosController {
         if(AuthHelper::loggedUser()){
             $this->model->delete($id);
             header("Location: /libros");
+            die();
         }else{
             header("Location: /login");
+            die();
         }
     }
 }

@@ -1,8 +1,9 @@
 <?php
+    //TODO: preguntar si es buena práctica
+    session_start();
     require_once 'app/controllers/UsuariosController.php';
     require_once 'app/controllers/LibrosController.php';
     require_once 'app/controllers/AutoresController.php';
-
     define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
     // leo el parametro accion
@@ -82,6 +83,9 @@
             break;
         case 'login':
             $usuariosController->login();
+            break;
+        case 'logout':
+            $usuariosController->logout();
             break;
         default:
             echo "404 not found";

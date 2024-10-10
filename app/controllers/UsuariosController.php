@@ -25,5 +25,9 @@ class UsuariosController {
             }
         } 
     }
+
+    public function logout(){
+        
+    }
 }
 ?>

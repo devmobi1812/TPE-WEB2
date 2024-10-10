@@ -2,9 +2,9 @@
 
     $configuracion = [];
 
-    $configuracion['host']       = 'localhost';
+    $configuracion['host']       = 'db';
     $configuracion['usuario']    = 'root';
-    $configuracion['password']   = '';
-    $configuracion['database'] = 'libreria';
+    $configuracion['password']   = 'root';
+    $configuracion['database'] = 'libreria2';
     
 ?>

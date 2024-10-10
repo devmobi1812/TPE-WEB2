@@ -4,10 +4,27 @@
     grid-gap: 25px;
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex:1;
+}
+.welcome-message{
+    display: none;
+}
 
-@media screen and (min-width: 660px) { 
+@media screen and (min-width: 576px) { 
     .autores {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .welcome-message{
+        display: block;
+    }
+    .session-button{
+        margin-left: auto;
     }
 }
