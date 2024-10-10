@@ -1,6 +1,4 @@
 <?php
-    //TODO: preguntar si es buena práctica
-    session_start();
     require_once 'app/controllers/UsuariosController.php';
     require_once 'app/controllers/LibrosController.php';
     require_once 'app/controllers/AutoresController.php';

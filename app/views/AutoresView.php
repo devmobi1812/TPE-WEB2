@@ -6,8 +6,8 @@
         function __construct(){
             $this->smarty= new Smarty();
             $this->smarty->assign('base', BASE_URL);
-            //TODO:temporal, preguntar si es buena práctica
             $this->smarty->assign("user", AuthHelper::loggedUser());
+            $this->smarty->assign("isAdmin", AuthHelper::isAdmin());
         }
 
         function verAutores($autores){

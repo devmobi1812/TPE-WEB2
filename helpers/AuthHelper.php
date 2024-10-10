@@ -13,17 +13,18 @@ require_once "app/models/UsuariosModel.php";
             $fetchedUser = self::$userModel->findByUsername($user->nombre);
             if(!empty($fetchedUser)){
                 if(password_verify($user->password, $fetchedUser->password)){
-                    session_unset();
+                    if (session_status() == PHP_SESSION_NONE) {
+                        session_start();
+                    }
                     $_SESSION["user"] = $fetchedUser;
                 }
             }
         }
         public static function loggedUser(){
-            if(session_status() == PHP_SESSION_ACTIVE){
-                return $_SESSION["user"] ?? false;
-            }else{
-                return false;
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
             }
+            return $_SESSION["user"] ?? false;
         }
 
         public static function isAdmin(){
