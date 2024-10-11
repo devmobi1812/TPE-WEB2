@@ -19,15 +19,16 @@ class UsuariosController {
             $user->password = $password;
             AuthHelper::login($user);
             if(AuthHelper::loggedUser()){
-                header("Location: /inicio");
+                header("Location:".BASE_URL."inicio");
             }else{
-                header("Location: /iniciar-sesion");
+                header("Location:".BASE_URL."iniciar-sesion");
             }
         } 
     }
 
     public function logout(){
-        
+        AuthHelper::logout();
+        header("Location:".BASE_URL."inicio");
     }
 }
 ?>

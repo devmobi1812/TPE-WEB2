@@ -20,6 +20,17 @@ require_once "app/models/UsuariosModel.php";
                 }
             }
         }
+
+        public static function logout(){
+            if(session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+            }
+            //  Si usuario esta definido, cerrar session.
+            if(isset($_SESSION['user'])){
+                session_destroy();
+            }
+            
+        }
         public static function loggedUser(){
             if (session_status() == PHP_SESSION_NONE) {
                 session_start();
