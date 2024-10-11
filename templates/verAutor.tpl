@@ -17,9 +17,11 @@
                     <td>{$libro->titulo}</td>
                     <td>{$libro->autor_nombre}</td>
                     <td>
-                        <a href="libros/{$libro->isbn}" class="btn btn-primary">Ver</a>
-                        <a href="libros/editar/{$libro->isbn}" class="btn btn-primary">Editar</a>
-                        <a href="libros/eliminar/{$libro->isbn}" class="btn btn-primary">Eliminar</a>
+                        <a href="libros/{$libro->isbn}" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a><!--BOTON DE VER-->
+                        {if {$isAdmin}}
+                            <a href="libros/editar/{$libro->isbn}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
+                            <a href="libros/eliminar/{$libro->isbn}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>   <!--BOTON DE ELIMINAR-->
+                        {/if}
                     </td>
                 </tr>
             </tbody>
