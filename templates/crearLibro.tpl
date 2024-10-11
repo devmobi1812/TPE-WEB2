@@ -2,7 +2,7 @@
 {include file='header.tpl'} 
     <div class="container">
         <h1>Crear autor</h1>
-        <form method="POST" action="/libros/enviar">
+        <form method="POST" action="libros/enviar">
             <div class="mb-3">
                 <label for="isbn" class="form-label">ISBN</label>
                 <input type="number" class="form-control" name="isbn" required>

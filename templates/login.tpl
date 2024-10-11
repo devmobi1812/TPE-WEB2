@@ -1,7 +1,7 @@
 {include file='head.tpl'}  
 {include file='header.tpl'} 
 <div class="container">
-    <form method="POST" action="/login">
+    <form method="POST" action="login">
         <div class="mb-3">
             <label for="username" class="form-label">Nombre de usuario</label>
             <input type="text" name="username" class="form-control" aria-describedby="emailHelp">

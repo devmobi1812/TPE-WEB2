@@ -32,12 +32,13 @@ class LibrosController {
         if(AuthHelper::isAdmin()){
             $this->view->create($this->autoresModel->getAutores());
         }else{
-            header("Location: /login");
+            header("Location:".BASE_URL."login");
             die();
         }
     }
 
     public function store(){
+
     }
 
     public function edit($id){
@@ -49,7 +50,7 @@ class LibrosController {
                 echo "libro con isbn ".$id." no encontrado";
             }
         }else{
-            header("Location: /login");
+            header("Location:".BASE_URL."login");
             die();
         }
     }
@@ -60,10 +61,10 @@ class LibrosController {
     public function destroy($id){
         if(AuthHelper::isAdmin()){
             $this->model->delete($id);
-            header("Location: /libros");
+            header("Location:".BASE_URL."libros");
             die();
         }else{
-            header("Location: /login");
+            header("Location:".BASE_URL."login");
             die();
         }
     }
