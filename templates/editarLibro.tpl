@@ -1,8 +1,9 @@
 {include file='head.tpl'}  
 {include file='header.tpl'} 
     <div class="container">
-        <h1>Crear autor</h1>
+        <h1>Editar {$libro->titulo}</h1>
         <form method="POST" action="libros/guardar">
+            <input type="hidden" name="old_isbn" value="{$old_isbn}">
             <div class="mb-3">
                 <label for="isbn" class="form-label">ISBN</label>
                 <input type="number" class="form-control" name="isbn" required value="{$libro->isbn}">
@@ -41,7 +42,7 @@
                 <label for="nro_de_paginas" class="form-label">Número de páginas</label>
                 <input type="number" class="form-control" name="nro_de_paginas" required value="{$libro->nro_de_paginas}">
             </div>
-            <button type="submit" class="btn btn-primary">Crear</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
             <a class="btn btn-primary" href="libros" role="button">Cancelar</a>
         </form>
     </div>

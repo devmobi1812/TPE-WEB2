@@ -25,7 +25,7 @@
         </tr>
         <tr>
             <th scope="row">Sinopsis</th>
-            <td>{$libro->sinopsis}</td>
+            <td>{nl2br($libro->sinopsis)}</td>
         </tr>
         <tr>
             <th scope="row">Autor</th>

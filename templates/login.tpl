@@ -10,7 +10,7 @@
             <label for="password" class="form-label">Contraseña</label>
             <input type="password" name="password" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
     </form>
 </div>
 {include file='footer.tpl'}

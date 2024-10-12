@@ -40,7 +40,7 @@ class LibrosModel extends Model{
                 $libro->editorial,
                 $libro->encuadernado,
                 $libro->sinopsis,
-                $libro->autor->id,
+                $libro->autor,
                 $libro->nro_de_paginas,
             ]);
             $connection->commit();
@@ -61,9 +61,9 @@ class LibrosModel extends Model{
                 $libro->editorial,
                 $libro->encuadernado,
                 $libro->sinopsis,
-                $libro->autor->id,
+                $libro->autor,
                 $libro->nro_de_paginas,
-                $libro->isbn
+                $libro->old_isbn
             ]);
             $connection->commit();
         }catch(Exception $e){

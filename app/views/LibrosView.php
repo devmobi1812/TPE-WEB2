@@ -26,10 +26,11 @@ class LibrosView{
         $this->smarty->display("templates/crearLibro.tpl");
     }
 
-    public function edit($libro, $autores){
+    public function edit($libro, $autores, $old_isbn){
         $this->smarty->assign('titulo', "Editar ".$libro->titulo);
         $this->smarty->assign("libro", $libro);
         $this->smarty->assign("autores", $autores);
+        $this->smarty->assign("old_isbn", $old_isbn);
         $this->smarty->display("templates/editarLibro.tpl");
     }
 

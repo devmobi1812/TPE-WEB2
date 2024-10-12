@@ -1,7 +1,7 @@
 {include file='head.tpl'}  
 {include file='header.tpl'} 
     <div class="container">
-        <h1>Crear autor</h1>
+        <h1>Cargar Libro</h1>
         <form method="POST" action="libros/enviar">
             <div class="mb-3">
                 <label for="isbn" class="form-label">ISBN</label>
@@ -31,7 +31,7 @@
                 <label for="sinopsis" class="form-label">Sinopsis</label>
                 <textarea class="form-control" rows="4" name="sinopsis"></textarea>
             <div class="mb-3">
-                <label for="isbn" class="form-label">Autor</label>
+                <label for="autor" class="form-label">Autor</label>
                 <select class="form-select" name="autor">
                     <option selected>Seleccione un autor</option>
                     {foreach from=$autores item=autor}

@@ -2,8 +2,8 @@
     require_once 'app/controllers/UsuariosController.php';
     require_once 'app/controllers/LibrosController.php';
     require_once 'app/controllers/AutoresController.php';
-    define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
-
+    //NOTA: tuve que agregar un rtrim para eliminar la última barra de la url puesto que me aparecian con doble barra en algunos casos
+    define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . rtrim(dirname($_SERVER['PHP_SELF']), '/') . '/');
     // leo el parametro accion
     $action = 'home'; // accion por defecto
     if (!empty($_GET['action'])) {
@@ -86,7 +86,7 @@
             $usuariosController->logout();
             break;
         default:
-            echo "404 not found";
+            header("Location: ".BASE_URL."inicio");
             break;
     }
 

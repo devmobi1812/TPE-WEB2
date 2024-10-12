@@ -1,6 +1,11 @@
 {include file='head.tpl'}  
 {include file='header.tpl'} 
 <div class="container">
+{if {$isAdmin}}
+    <a href="libros/crear" class="btn btn-primary">
+    <i class="fa-solid fa-circle-plus"></i> Cargar
+    </a>
+{/if}
 <table class="table">
     <thead>
     <tr>

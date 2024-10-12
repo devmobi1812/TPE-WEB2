@@ -38,14 +38,34 @@ class LibrosController {
     }
 
     public function store(){
+        if(AuthHelper::isAdmin()){
+            $campos = ["isbn", "titulo", "fecha_de_publicacion", "editorial", "encuadernado", "sinopsis", "autor", "nro_de_paginas"];
+            $libro = new stdClass();
+            $isValidLibro = true;
+            foreach($campos as $campo){
+                $libro->$campo = $_POST[$campo] ?? false;
+                $isValidLibro = $isValidLibro && $libro->$campo;
+            }
+            if($isValidLibro){
+                $this->model->create($libro);
+                header("Location:".BASE_URL."libros/$libro->isbn");
+                die();
+            }else{
+                header("Location:".BASE_URL."libros/crear");
+                die();    
+            }
 
+        }else{
+            header("Location:".BASE_URL."login");
+            die();
+        }
     }
 
     public function edit($id){
         $libro = $this->model->find($id);
         if(AuthHelper::isAdmin()){
             if($libro){
-                $this->view->edit($libro, $this->autoresModel->getAutores());
+                $this->view->edit($libro, $this->autoresModel->getAutores(), $id);
             }else{
                 echo "libro con isbn ".$id." no encontrado";
             }
@@ -55,7 +75,27 @@ class LibrosController {
         }
     }
     public function update(){
+        if(AuthHelper::isAdmin()){
+            $campos = ["isbn", "titulo", "fecha_de_publicacion", "editorial", "encuadernado", "sinopsis", "autor", "nro_de_paginas", "old_isbn"];
+            $libro = new stdClass();
+            $isValidLibro = true;
+            foreach($campos as $campo){
+                $libro->$campo = $_POST[$campo] ?? false;
+                $isValidLibro = $isValidLibro && $libro->$campo;
+            }
+            if($isValidLibro){
+                $this->model->update($libro);
+                header("Location:".BASE_URL."libros/$libro->isbn");
+                die();
+            }else{
+                header("Location:".BASE_URL."libros/editar/$libro->old_isbn");
+                die();    
+            }
 
+        }else{
+            header("Location:".BASE_URL."login");
+            die();
+        }
     }
 
     public function destroy($id){
