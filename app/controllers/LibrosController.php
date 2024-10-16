@@ -32,7 +32,7 @@ class LibrosController {
         if(AuthHelper::isAdmin()){
             $this->view->create($this->autoresModel->getAutores());
         }else{
-            header("Location:".BASE_URL."login");
+            header("Location:".BASE_URL."iniciar-sesion");
             die();
         }
     }
@@ -56,7 +56,7 @@ class LibrosController {
             }
 
         }else{
-            header("Location:".BASE_URL."login");
+            header("Location:".BASE_URL."iniciar-sesion");
             die();
         }
     }
@@ -70,7 +70,7 @@ class LibrosController {
                 echo "libro con isbn ".$id." no encontrado";
             }
         }else{
-            header("Location:".BASE_URL."login");
+            header("Location:".BASE_URL."iniciar-sesion");
             die();
         }
     }
@@ -93,7 +93,7 @@ class LibrosController {
             }
 
         }else{
-            header("Location:".BASE_URL."login");
+            header("Location:".BASE_URL."iniciar-sesion");
             die();
         }
     }
@@ -104,7 +104,7 @@ class LibrosController {
             header("Location:".BASE_URL."libros");
             die();
         }else{
-            header("Location:".BASE_URL."login");
+            header("Location:".BASE_URL."iniciar-sesion");
             die();
         }
     }
