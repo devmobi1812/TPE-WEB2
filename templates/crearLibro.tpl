@@ -1,8 +1,9 @@
 {include file='head.tpl'}  
 {include file='header.tpl'} 
-    <div class="container">
+<div class="col-12 col-md-10 col-lg-7 col-xl-6 my-5">
+    <div class="card shadow-lg rounded-4">
+    <form method="POST" action="libros/enviar" class="p-4">
         <h1>Cargar Libro</h1>
-        <form method="POST" action="libros/enviar">
             <div class="mb-3">
                 <label for="isbn" class="form-label">ISBN</label>
                 <input type="number" class="form-control" name="isbn" required>
@@ -39,12 +40,15 @@
                     {/foreach}
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="mb-4">
                 <label for="nro_de_paginas" class="form-label">Número de páginas</label>
                 <input type="number" class="form-control" name="nro_de_paginas" required>
             </div>
-            <button type="submit" class="btn btn-primary">Crear</button>
-            <a class="btn btn-primary" href="libros" role="button">Cancelar</a>
+            <div class="d-flex justify-content-between">
+                <a class="btn btn-secondary" href="libros" role="button">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Crear</button>
+            </div>
         </form>
     </div>
+</div>
 {include file='footer.tpl'}

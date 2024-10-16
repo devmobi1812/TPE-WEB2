@@ -35,6 +35,5 @@
           </nav>
 
     </header>
-    <main>
-
+    <main class="row d-flex justify-content-center">
     

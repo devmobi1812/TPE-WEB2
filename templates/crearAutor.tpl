@@ -1,23 +1,27 @@
 {include file='head.tpl'}  
 {include file='header.tpl'} 
-    <div class="container">
-        <h1>Crear autor</h1>
-        <form method="POST" action="autores/enviar">
+<div class="col-12 col-md-10 col-lg-7 col-xl-6 my-5">
+    <div class="card shadow-lg rounded-4">
+        <form method="POST" action="autores/enviar" class="p-4">
+            <h1>Crear autor</h1>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nombre" required>
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="nombre" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Biografia</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="biografia" required>
+                <label for="exampleInputEmail1" class="form-label">Biografía</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="biografia" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Imagen</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="imagen">
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="imagen">
             </div>
-            <button type="submit" class="btn btn-primary">Crear</button>
-            <a class="btn btn-primary" href="autores" role="button">Cancelar</a>
+            <div class="d-flex justify-content-between">
+                <a class="btn btn-secondary" href="autores" role="button">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Crear</button>
+            </div>
         </form>
     </div>
+</div>
 
 {include file='footer.tpl'}
