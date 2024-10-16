@@ -13,18 +13,20 @@ require_once "app/models/UsuariosModel.php";
             $fetchedUser = self::$userModel->findByUsername($user->nombre);
             if(!empty($fetchedUser)){
                 if(password_verify($user->password, $fetchedUser->password)){
-                    if (session_status() == PHP_SESSION_NONE) {
-                        session_start();
-                    }
+                    self::iniciarSession();
                     $_SESSION["user"] = $fetchedUser;
                 }
             }
         }
 
-        public static function logout(){
-            if(session_status() !== PHP_SESSION_ACTIVE) {
+        private static function iniciarSession(){
+            if (session_status() == PHP_SESSION_NONE) {
                 session_start();
             }
+        }
+
+        public static function logout(){
+            self::iniciarSession();
             //  Si usuario esta definido, cerrar session.
             if(isset($_SESSION['user'])){
                 session_destroy();
@@ -32,9 +34,7 @@ require_once "app/models/UsuariosModel.php";
             
         }
         public static function loggedUser(){
-            if (session_status() == PHP_SESSION_NONE) {
-                session_start();
-            }
+            self::iniciarSession();
             return $_SESSION["user"] ?? false;
         }
 
@@ -42,5 +42,7 @@ require_once "app/models/UsuariosModel.php";
             $user = self::loggedUser();
             return ($user) ? $user->rol_nombre == 'ADMIN' : false;
         }
+
+        
     }
 ?>

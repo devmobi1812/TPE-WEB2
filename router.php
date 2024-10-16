@@ -51,28 +51,27 @@
             if(isset($params[1]) && $params[1]!=null){
                 switch($params[1]){
                     case 'crear':
-                        $autoresController->crearAutor();
+                        $autoresController->create();
                         break;
                     case 'enviar':
-                        $autoresController->enviar();
+                        $autoresController->store();
                         break;
                     case 'editar':
-                        $autoresController->editar($params[2]);
+                        $autoresController->edit($params[2]);
                         break;
                     case 'guardar':
-                        $autoresController->guardar();
+                        $autoresController->update();
                         break;
                     case 'eliminar':
-                        $autoresController->eliminar($params[2]);
-                        $autoresController->verAutores();
+                        $autoresController->destroy($params[2]);
                         break;
                     default:
-                        $autoresController->verAutor($params[1]);
+                        $autoresController->show($params[1]);
                         break;
                 }
                 
             }else{
-                $autoresController->verAutores();
+                $autoresController->index();
             }
 
             break;
@@ -84,6 +83,10 @@
             break;
         case 'logout':
             $usuariosController->logout();
+            break;
+        case 'crearAdmin':
+            $usuariosController->registrarTMP();
+            header("Location: ".BASE_URL."inicio");
             break;
         default:
             header("Location: ".BASE_URL."inicio");

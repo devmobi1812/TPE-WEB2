@@ -30,7 +30,7 @@ class LibrosController {
 
     public function create(){
         if(AuthHelper::isAdmin()){
-            $this->view->create($this->autoresModel->getAutores());
+            $this->view->create($this->autoresModel->all());
         }else{
             header("Location:".BASE_URL."iniciar-sesion");
             die();
@@ -65,7 +65,7 @@ class LibrosController {
         $libro = $this->model->find($id);
         if(AuthHelper::isAdmin()){
             if($libro){
-                $this->view->edit($libro, $this->autoresModel->getAutores(), $id);
+                $this->view->edit($libro, $this->autoresModel->all(), $id);
             }else{
                 echo "libro con isbn ".$id." no encontrado";
             }

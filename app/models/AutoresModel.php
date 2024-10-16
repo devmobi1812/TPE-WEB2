@@ -2,7 +2,7 @@
     require_once('Model.php');
     class AutoresModel extends Model{
 
-        public function crearAutor($autor){
+        public function create($autor){
             try{
                 $conexion = $this->crearConexion();
                 $conexion->beginTransaction();
@@ -14,7 +14,7 @@
                 error_log($e->getMessage());
             }
         }
-        public function getAutores(){
+        public function all(){
             try{
                 $conexion = $this->crearConexion();
                 $conexion->beginTransaction();
@@ -31,7 +31,7 @@
             }
         }
 
-        public function getAutor($id){
+        public function find($id){
             try{
                 $conexion = $this->crearConexion();
                 $conexion->beginTransaction();
@@ -64,7 +64,7 @@
             }
         }
 
-        public function eliminarAutor($id){
+        public function delete($id){
             try{
                 $conexion = $this->crearConexion();
                 $conexion->beginTransaction();
@@ -77,7 +77,7 @@
             }
         }
 
-        public function guardarAutor($autor){
+        public function update($autor){
             try{
                 $conexion = $this->crearConexion();
                 $conexion->beginTransaction();
