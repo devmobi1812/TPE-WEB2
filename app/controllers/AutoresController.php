@@ -35,13 +35,13 @@
                     $nombre = $_POST['nombre'];
                     $biografia = $_POST['biografia'];
                     $imagen="";
+
                     if(empty($_POST['imagen'])){
                         $imagen="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=1380&t=st=1728084474~exp=1728085074~hmac=5e4b0abebdca24f5367b3d99334c582cb0a4fb53b61dcbf454589a609cc395a2";
                     }else{
                         $imagen = $_POST['imagen'];
                     }
                     
-            
                     $autor = new stdClass();
                     $autor->nombre=$nombre;
                     $autor->biografia=$biografia;
@@ -91,6 +91,7 @@
                     $nombre = $_POST['nombre'];
                     $biografia = $_POST['biografia'];
                     $imagen="";
+
                     if(empty($_POST['imagen'])){
                         $imagen="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?w=1380&t=st=1728084474~exp=1728085074~hmac=5e4b0abebdca24f5367b3d99334c582cb0a4fb53b61dcbf454589a609cc395a2";
                     }else{

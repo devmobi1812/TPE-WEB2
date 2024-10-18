@@ -2,7 +2,7 @@
     require_once 'app/controllers/UsuariosController.php';
     require_once 'app/controllers/LibrosController.php';
     require_once 'app/controllers/AutoresController.php';
-    //NOTA: tuve que agregar un rtrim para eliminar la última barra de la url puesto que me aparecian con doble barra en algunos casos
+    //NOTA: tuve que agregar un rtrim para eliminar la última barra de la url puesto que me aparecian con doble barra en algunos casos, uso linux
     define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . rtrim(dirname($_SERVER['PHP_SELF']), '/') . '/');
     // leo el parametro accion
     $action = 'home'; // accion por defecto
@@ -83,10 +83,6 @@
             break;
         case 'logout':
             $usuariosController->logout();
-            break;
-        case 'crearAdmin':
-            $usuariosController->registrarTMP();
-            header("Location: ".BASE_URL."inicio");
             break;
         default:
             header("Location: ".BASE_URL."inicio");

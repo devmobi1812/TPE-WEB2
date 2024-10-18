@@ -31,7 +31,7 @@ CREATE TABLE `autores` (
   `id` int(11) NOT NULL,
   `nombre` varchar(64) NOT NULL,
   `biografia` varchar(2000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE `libros` (
   `sinopsis` varchar(2000) NOT NULL,
   `autor` int(11) NOT NULL,
   `nro_de_paginas` smallint(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Indexes for dumped tables

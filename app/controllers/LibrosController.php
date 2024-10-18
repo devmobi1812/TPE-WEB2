@@ -24,7 +24,7 @@ class LibrosController {
         if($libro){
             $this->view->show($libro);
         }else{
-            echo "libro con isbn ".$id." no encontrado";
+            echo "Libro con ISBN ".$id." no encontrado.";
         }
     }
 
@@ -67,7 +67,7 @@ class LibrosController {
             if($libro){
                 $this->view->edit($libro, $this->autoresModel->all(), $id);
             }else{
-                echo "libro con isbn ".$id." no encontrado";
+                echo "Libro con ISBN ".$id." no encontrado.";
             }
         }else{
             header("Location:".BASE_URL."iniciar-sesion");

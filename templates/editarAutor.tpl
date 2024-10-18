@@ -3,7 +3,7 @@
 <div class="col-12 col-md-10 col-lg-7 col-xl-6 my-5">
     <div class="card shadow-lg rounded-4">
         <form method="POST" action="autores/guardar" class="p-4">
-            <h1 class="text-center">Editar {$autor.nombre}</h1>
+            <h1>Editar autor</h1>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nombre</label>
                 <input type="text" class="form-control"  aria-describedby="emailHelp" name="nombre" value="{$autor.nombre}">

@@ -21,7 +21,7 @@ class LibrosView{
         $this->smarty->display("templates/verLibro.tpl");
     }
     public function create($autores){
-        $this->smarty->assign('titulo', "Nuevo libro");
+        $this->smarty->assign('titulo', "Crear libro");
         $this->smarty->assign("autores", $autores);
         $this->smarty->display("templates/crearLibro.tpl");
     }

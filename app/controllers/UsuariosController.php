@@ -56,8 +56,6 @@ class UsuariosController {
         }else{
             return print("Error, las contraseñas no son iguales");
         }
-            
-        
     }
 }
 ?>
