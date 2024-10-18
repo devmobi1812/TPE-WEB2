@@ -47,4 +47,4 @@ Este documento proporciona instrucciones detalladas para desplegar el sitio web 
 - Ayrton Lopez Mobilio (ayrtonmobilio2020@gmail.com)
 
 ## Archivo SQL (Base de Datos)
-[Ir a SQL](.sql/libreria.sql)
+[Ir a SQL](./sql/libreria.sql)
