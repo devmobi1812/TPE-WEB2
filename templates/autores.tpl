@@ -15,7 +15,7 @@
                         <a href="autores/{$autor->id}" class="btn btn-primary"><i class="fa-solid fa-eye"></i>  Ver libros</a>
                         {if {$isAdmin}}
                             <a href="autores/editar/{$autor->id}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a> <!--BOTON DE EDITAR-->
-                            <a href="autores/eliminar/{$autor->id}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>   <!--BOTON DE ELIMINAR-->
+                            <a href="autores/eliminar/{$autor->id}" class="btn btn-danger delete-autor"><i class="fa-solid fa-trash"></i></a>   <!--BOTON DE ELIMINAR-->
                         {/if}
                     </div>
                     

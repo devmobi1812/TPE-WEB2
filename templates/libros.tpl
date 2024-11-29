@@ -29,7 +29,7 @@
                     <a href="libros/editar/{$libro->isbn}" class="btn btn-primary">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
-                    <a href="libros/eliminar/{$libro->isbn}" class="btn btn-danger">
+                    <a href="libros/eliminar/{$libro->isbn}" class="btn btn-danger delete-libro">
                         <i class="fa-solid fa-trash"></i>
                     </a>
                 {/if}
