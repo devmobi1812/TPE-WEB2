@@ -9,8 +9,9 @@ class UsuariosView{
 
     }
 
-    public function login(){
+    public function login($errors){
         $this->smarty->assign("titulo", "Iniciar Sesión");
+        $this->smarty->assign("errors", $errors);
         $this->smarty->display("templates/login.tpl");
     }
 }

@@ -6,12 +6,17 @@
             <h1 class="text-center">Iniciar sesión</h1>
             <div class="mb-3">
                 <label for="username" class="form-label">Nombre de usuario</label>
-                <input type="text" name="username" class="form-control" aria-describedby="emailHelp">
+                <input type="text" name="username" class="form-control">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
                 <input type="password" name="password" class="form-control">
             </div>
+            {if isset($errors)&&isset($errors['login']) }
+                <div class="alert alert-danger" role="alert">
+                    {$errors['login']}
+                </div>
+            {/if}
             <div class="d-flex flex-row-reverse">
                 <button type="submit" class="btn btn-primary">Iniciar sesión</button>
             </div>

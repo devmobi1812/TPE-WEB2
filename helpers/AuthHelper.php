@@ -20,7 +20,7 @@ require_once "app/models/UsuariosModel.php";
         }
 
         private static function iniciarSession(){
-            if (session_status() == PHP_SESSION_NONE) {
+            if (session_status() === PHP_SESSION_NONE) {
                 session_start();
             }
         }

@@ -8,25 +8,36 @@ class UsuariosController {
     public function __construct(){
         $this->view = new UsuariosView();
         $this->model = new UsuariosModel();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
     }
     
     public function loginForm(){
-        $this->view->login();
+        $errors = $_SESSION["errors"] ?? [];
+        $this->view->login($errors);
     }
     public function login(){
-        $username = $_POST["username"];
-        $password = $_POST["password"];
-        if(!empty($username)&&!empty($password)){
-            $user = new stdClass();
-            $user->nombre = $username;
-            $user->password = $password;
-            AuthHelper::login($user);
-            if(AuthHelper::loggedUser()){
-                header("Location:".BASE_URL."inicio");
-            }else{
-                header("Location:".BASE_URL."iniciar-sesion");
-            }
-        } 
+        unset($_SESSION['errors']['login']);
+
+        if(empty($_POST["username"])||empty($_POST["password"])){
+            $_SESSION['errors']['login'] = "Por favor rellene todos los campos para iniciar sesión"; 
+            header("Location:".BASE_URL."iniciar-sesion");
+            die();
+        }
+
+        $user = new stdClass();
+        $user->nombre = $_POST["username"];
+        $user->password = $_POST["password"];
+        AuthHelper::login($user);
+        if(!AuthHelper::loggedUser()){
+            $_SESSION['errors']['login'] = "Nombre de usuario y/o contraseña incorrecta"; 
+            header("Location:".BASE_URL."iniciar-sesion");
+            die();
+        }
+
+        header("Location:".BASE_URL."inicio");
+        die();
     }
 
     public function logout(){
